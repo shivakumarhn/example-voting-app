@@ -1,7 +1,7 @@
 Example Voting App
 =========
 
-Test me
+Test this line
 
 Getting started
 ---------------
