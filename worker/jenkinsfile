@@ -20,11 +20,12 @@ pipeline {
               if (env.BRANCH_NAME == 'master') {
                  dir('worker'){
                     sh 'mvn clean test'
-                   } else{
+                          } 
+                   }
+                   else{
                       echo 'Not a master branch'
                   } 
-              }
-          }
+            }
       }
       stage(package){
           steps{
