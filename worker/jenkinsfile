@@ -17,8 +17,12 @@ pipeline {
       stage(test){
           steps{
               echo 'Testing worker app'
-              dir('worker'){
-                 sh 'mvn clean test'
+              if (env.BRANCH_NAME == 'master') {
+                 dir('worker'){
+                    sh 'mvn clean test'
+                   } else{
+                      echo 'Not a master branch'
+                  } 
               }
           }
       }
